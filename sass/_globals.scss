@@ -1,0 +1,141 @@
+
+
+/* Globals
+-------------------------------*/
+*{
+    margin: 0;padding:0;
+}
+html{
+    font-size:$base-font-size;
+}
+body{
+    font-family:$font-stack;
+    min-height:100%;
+    font-size:$font-size-default;
+    background-color:$color-background;
+    -webkit-font-smoothing: antialiased;
+    background:$color-background;
+    width:$full;
+}
+
+
+
+
+/* Main settings
+-------------------------------*/
+
+/* float clearing for IE6 */
+* html .clearfix{
+ height: 1%;
+ overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+ min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0;
+ visibility: hidden;
+ font-size: 0;
+}
+
+.clr{clear:both;}
+
+
+.colfull{width:$full;height:$full;padding:100px 50px;position:relative;box-sizing:border-box;}
+.left{float:left;}
+.right{float:right;}
+.half{position:relative;width:$half;min-height:1px;}
+.quarter{width:$quarter;}
+.threequarter{width:percentage(3/4);}
+.third{width:$third;}
+.block{display:block;}
+.auto{margin:auto;}
+.hidden{display:none;}
+.paddingleft{padding-left:20px;box-sizing:border-box;}
+.paddingright{padding-right:20px;box-sizing:border-box;}
+.small-paddingleft{padding-left:7.5px;box-sizing:border-box;}
+.small-paddingright{padding-right:7.5px;box-sizing:border-box;}
+.txtright{text-align:right;}
+.txtcenter{text-align:center;}
+.highlight{color:$color-highlight;}
+.hightlight:hover{text-decoration:underline;}
+.strong{font-weight:bold;}
+
+
+
+/* Text
+-------------------------------*/
+h1, h2, h3, h4, h5, h6{font-weight: lighter;}
+h1{font-size:rem(40px);}
+h2{
+    font-size:rem(25px);
+    margin-bottom:1.5rem;
+
+}
+h3{font-size:1.50rem;margin-bottom:1.5rem;}
+h4{font-size:rem(20px);line-height:28px;margin-bottom:$margin-bottom}
+h5{font-size:1rem;}
+h6{font-size:0.75rem;}
+li{list-style-type: none;line-height: 30px;}
+p{
+    margin-bottom:$margin-bottom;
+    font-family:$font-stack;
+    line-height:26px;
+    font-size:$font-size-default;}
+a{
+    text-decoration:none;
+    font-family:$font-stack;
+    color:$color-highlight;
+}
+table,label,input,textarea{font-family:$font-stack;font-size:$font-size-default;}
+
+
+/* Buttons
+-------------------------------*/
+.btn,.button,.wpcf7-submit{
+    position:relative;
+    cursor:pointer;
+    display:inline-block;
+    background-color:$color-btn;
+    color:$color-black;
+    
+    box-sizing:border-box;
+    transition:all 0.15s ease-in 0s;
+    border:none;
+    font-size:1rem;
+    padding:1rem;
+    padding-right:2rem; 
+    
+    svg{
+
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transition: right 0.2s ease-in 0s;
+        transition: right 0.2s ease-in 0s;
+        fill:$color-black;
+
+        :hover{
+            right:1rem;
+            text-decoration:none;
+            
+        }    
+    }
+    &:hover{
+        background-color:$color-black;
+        color:#fff;
+        svg{
+            fill:#fff;
+            right:1rem;
+            text-decoration:none;
+        }
+    }
+}

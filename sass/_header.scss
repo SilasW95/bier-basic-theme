@@ -1,0 +1,131 @@
+ /* Header Navigate
+    -------------------------------------------*/
+#header{ 
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:990;
+    width:$full;
+    transition:left 0.15s ease-in 0s;
+    background:$color-white;
+
+    %headerbtn{
+        position:relative;
+        min-height:5rem;
+        min-width:6rem;
+        // width:$headerbtn;
+        cursor: pointer;
+        color: #fff;
+        
+        background-color:$color-black;
+        // padding:2rem 2rem;
+        padding:2rem 2rem;
+        box-sizing: border-box;
+        transition:padding 0.1s ease-in 0s;
+    }
+    .navOpener{
+        @extend %headerbtn;
+
+        .line{
+            position:absolute;
+            height:3px;
+            background-color:#fff;
+            transition:all 0.15s ease-in 0s;
+
+            &:nth-child(1){
+                width:2rem;
+            }
+            &:nth-child(2){
+                width:1.6rem;
+                margin-top:rem(10px);
+                opacity:1.0;
+                transition:all 0.1 ease-in 0s;
+            }
+            &:nth-child(3){
+                width:1.2rem;
+                margin-top:rem(20px);
+            }
+        }
+        &:hover{
+            .line{
+                width:2rem;
+            }
+        }
+    }
+    .logo{
+        width: calc(100% - (#{$headerbtn + $headerbtn}));
+        padding:1rem 0;
+        text-align:center;
+        box-sizing:border-box; 
+        
+        svg{
+            width:5rem;
+        }
+    }
+    .shoppingcart{
+        @extend %headerbtn; 
+    }
+    
+
+
+}
+
+ /* SideMenu
+    -------------------------------------------*/
+#sideNav{
+    position:fixed;
+    top: rem(110px);
+    background-color:rgba(0,0,0,0.8);
+    left:-50%;
+    width:50%;
+    bottom:0;
+    transition:all 0.2s ease-in 0s;
+    ul{
+        li{
+            a{
+                display:block;
+                color:$color-white;
+                font-size:1rem;
+                padding:1rem 2rem;
+                box-sizing:border-box;   
+            }
+        }
+        &:first-child{
+            padding-top:1rem;
+        }
+    }
+}
+
+
+ /* Open Toggle Active
+    -------------------------------------------*/
+.open{
+    #header{
+        .navOpener{
+            background-color:$color-black-secondary;
+            padding-top:rem(60px);
+
+            .line{
+
+                &:nth-child(1){
+                    transform:rotate(45deg);
+                    width:rem(50px);
+                }
+                &:nth-child(2){
+                    opacity:0;
+                }
+                &:nth-child(3){
+                    transform:rotate(-45deg);
+                    width:rem(50px);
+                    margin-top:0
+                }
+            }
+        }
+    }
+    #sideNav{
+        left:0;
+    }
+
+}
+
+
