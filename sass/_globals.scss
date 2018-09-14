@@ -48,7 +48,7 @@ body{
 .clr{clear:both;}
 
 
-.colfull{width:$full;height:$full;padding:100px 50px;position:relative;box-sizing:border-box;}
+.colfull{width:$full;height:$full;padding:4rem 2rem;position:relative;box-sizing:border-box;}
 .left{float:left;}
 .right{float:right;}
 .half{position:relative;width:$half;min-height:1px;}
@@ -58,10 +58,12 @@ body{
 .block{display:block;}
 .auto{margin:auto;}
 .hidden{display:none;}
-.paddingleft{padding-left:20px;box-sizing:border-box;}
-.paddingright{padding-right:20px;box-sizing:border-box;}
-.small-paddingleft{padding-left:7.5px;box-sizing:border-box;}
-.small-paddingright{padding-right:7.5px;box-sizing:border-box;}
+.paddingleft{padding-left:1rem;box-sizing:border-box;}
+.paddingright{padding-right:1rem;box-sizing:border-box;}
+.paddingtop{padding-top:1rem;box-sizing:border-box;}
+.paddingbottom{padding-bottom:1rem;box-sizing:border-box;}
+.small-paddingleft{padding-left:0.5rem;box-sizing:border-box;}
+.small-paddingright{padding-right:0.5rem;box-sizing:border-box;}
 .txtright{text-align:right;}
 .txtcenter{text-align:center;}
 .highlight{color:$color-highlight;}
@@ -94,7 +96,12 @@ a{
     font-family:$font-stack;
     color:$color-highlight;
 }
-table,label,input,textarea{font-family:$font-stack;font-size:$font-size-default;}
+table,label,input,textarea{
+    font-family:$font-stack;
+    font-size:$font-size-default;
+    padding:1em;
+    border:solid 0px;
+}
 
 
 /* Buttons

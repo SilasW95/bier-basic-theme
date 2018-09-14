@@ -1,7 +1,8 @@
 footer{
-  
-
+    background-color:$color-black;
+    color:#fff;
     .cta{
+        background-color:$color-white;
         padding-left:4rem;
         
         .btn{
@@ -14,7 +15,7 @@ footer{
             &:after{
                 width: 21rem;
                 height: 4rem;
-                background-color: #000;
+                background-color:$color-black;
                 content: " ";
                 position: absolute;
                 left: 30px;
@@ -23,8 +24,7 @@ footer{
             }
         }   
     }
-    .usp{
-        background-color:$color-black; 
+    .usp{    
         ul{
             li{
                 
@@ -48,21 +48,59 @@ footer{
         }
 
     }
-    .socialslider{
+    .socialslider{  
         height:300px;
         width:100%;
         overflow:hidden;
 
         ul{
             li{
+                position:relative;
                 float:left;
+                height:15rem;
+                
+                a{
+                    background-color:yellow;
+                    display: block;
+                    position:absolute;
+                    background-size:cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    top:0;
+                    left:0;
+                    right:0;
+                    bottom:0;
+                    width:100%;
+
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+    .newsletter{
+        text-align:center;
+        padding-bottom:4rem;
+    }
+
+    /* Menu Footer
+    --------------------------------------------*/
+    .menu-footer-container{
+        ul
+        > {  li{
+                display:block;
+                float:left;
+                width:percentage(1/4);
+
+                ul{
+                    li{display:block;}
+                }
             }
         }
     }
 }
 .video{
-
-
     #homeVideo{
         width:100%;
         height:rem(640px);

@@ -42,31 +42,44 @@
         
     </section>
 </section>
-
-
-
-    <section class="colfull auto">
-        <h3>Dit maken anderen</h3>
-    </section>
+<section class="paddingbottom colfull auto">
+    <h3>Dit maken anderen</h3>
+</section>
     <section id="socialslider" class="socialslider swiper-container">
         <ul class="swiper-wrapper">
-            <li class="skills swiper-slide">test</li>
-            <li class="social swiper-slide">test1</li>
-            <li class="social swiper-slide">test2</li>
-            <li class="social swiper-slide">test3</li>
-            <li class="social swiper-slide">test4</li>
-            <li class="social swiper-slide">test5</li>
-            <li class="social swiper-slide">test6</li>
+            <li class="skills swiper-slide">
+                <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-1.jpg)"></a>
+            </li>
+            <li class="skills swiper-slide">
+            <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-2.jpg)"></a>
+            </li>
+            <li class="skills swiper-slide">
+            <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-3.jpg)"></a>
+            </li>
+            <li class="skills swiper-slide">
+            <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-4.jpg)"></a>
+            </li>
+            <li class="skills swiper-slide">
+            <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-3.jpg)"></a>
+            </li>
+            <li class="skills swiper-slide">
+            <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-1.jpg)"></a>
+            </li>   
         </ul>
+        <div class="swiper-pagination"></div>
     </section>
     <section class="colfull auto">
         <section class="newsletter">
             <h3>Blijf op de hoogte</h3>
             <form action="#">
-                <input type="text" name="newsletter-email" placeholder="e-mailadres">
-                <input type="submit" value="send">
+                <input type="text" name="newsletter-email" placeholder="e-mailadres"><input type="submit" class="btn" value="Zend">
             </form>
         </section>
+        <?php wp_nav_menu( array(
+            'menu'           => 'Footer', // Do not fall back to first non-empty menu.
+            //'theme_location' => '__no_such_location'
+            'fallback_cb'    => false // Do not fall back to wp_page_menu()
+        ) ); ?>
         <section class="copyright">
             <p>Copyright <?php echo date('Y'); ?> Silas Willemsen</p>
         </section>  
