@@ -73,8 +73,9 @@
  /* SideMenu
     -------------------------------------------*/
 #sideNav{
+    z-index: 980;
     position:fixed;
-    top: rem(110px);
+    top:5rem;
     background-color:rgba(0,0,0,0.8);
     left:-50%;
     width:50%;
@@ -86,7 +87,7 @@
                 display:block;
                 color:$color-white;
                 font-size:1rem;
-                padding:1rem 2rem;
+                padding:1rem 3rem;
                 box-sizing:border-box;   
             }
         }
@@ -103,20 +104,20 @@
     #header{
         .navOpener{
             background-color:$color-black-secondary;
-            padding-top:rem(60px);
+            padding-top:2.5rem;
 
             .line{
 
                 &:nth-child(1){
                     transform:rotate(45deg);
-                    width:rem(50px);
+                    width:2rem;
                 }
                 &:nth-child(2){
                     opacity:0;
                 }
                 &:nth-child(3){
                     transform:rotate(-45deg);
-                    width:rem(50px);
+                    width:2rem;
                     margin-top:0
                 }
             }

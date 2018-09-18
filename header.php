@@ -29,67 +29,13 @@
 <div id="container">
 <div id="wrapper" class="site main-container <?php echo ( !is_page_template( 'template-home.php' )) ? 'container': ''; ?>">
     <section id="sideNav">
-            <ul> 
-                <li>
-                    <a href="#">Menu item</a>   
-                </li>
-                <li>
-                    <a href="#">Menu item</a>    
-                </li>
-                <li>
-                    <a href="#">Menu item</a>      
-                </li>
-                <li>
-                    <a href="#">Menu item</a>  
-                </li>
-                <li>
-                    <a href="#">Menu item</a>  
-                </li>
-                <li>
-                    <a href="#">Menu item</a>  
-                </li>
-                <li>
-                    <a href="#">Menu item</a>  
-                </li>
-                <?php /*
-                if ( 'templates/template-home.php' != get_post_meta($post->ID, '_wp_page_template', true )){ ?>
-                    <li>
-                        <a href="<?php echo get_permalink(2); ?>#work">Work</a>   
-                    </li>
-                    <li>
-                        <a href="<?php echo get_permalink(2); ?>#aboutme">About</a>   
-                    </li>
-                    <li>
-                        <a href="<?php  echo get_permalink(2); ?>#contact">Contact</a>   
-                    </li>
-                <?php   
-                } 
-                else{
-                ?>
-                    <li>
-                        <a class="nav scroll" href="#work">Work</a>
-                        <ul class="menu-cat">
-                            <?php
-                            $args = array(
-                                'orderby' => 'name',
-                                'order' => 'DESC'
-                            );
-                            $categories = get_categories($args);
-                            foreach($categories as $category) { 
-                                echo '<li><a href="#work" id="' .  $category->slug . '" class="nav scroll categorie" title="' . 'View ' . $category->name  . '" ' . '>' . $category->name.'</a></li>';
-                            }  
-                            ?>         
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav scroll" href="#aboutme">About</a>   
-                    </li> 
-                    <li>
-                        <a class="nav scroll" href="#contact">Contact</a>   
-                    </li>   
-                <?php 
-                } */ ?> 
-            </ul>    
+    <?php wp_nav_menu( array(
+                'menu'           => 'Main', // Do not fall back to first non-empty menu.
+                'container' => false,
+                'menu_class' => 'main-list-item',
+                //'theme_location' => '__no_such_location'
+                'fallback_cb'    => false // Do not fall back to wp_page_menu()
+            ) ); ?>
     </section>
     <div id="overlay"></div>
 	<header id="header" class="site-header" role="banner">

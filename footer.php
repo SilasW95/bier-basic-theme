@@ -75,16 +75,23 @@
                 <input type="text" name="newsletter-email" placeholder="e-mailadres"><input type="submit" class="btn" value="Zend">
             </form>
         </section>
-        <?php wp_nav_menu( array(
-            'menu'           => 'Footer', // Do not fall back to first non-empty menu.
-            //'theme_location' => '__no_such_location'
-            'fallback_cb'    => false // Do not fall back to wp_page_menu()
-        ) ); ?>
-        <section class="copyright">
-            <p>Copyright <?php echo date('Y'); ?> Silas Willemsen</p>
-        </section>  
-    </section>
 
+        <section class="footer-list paddingbottom">
+            <?php wp_nav_menu( array(
+                'menu'           => 'Footer', // Do not fall back to first non-empty menu.
+                'container' => false,
+                'menu_class' => 'footer-list-item',
+                //'theme_location' => '__no_such_location'
+                'fallback_cb'    => false // Do not fall back to wp_page_menu()
+            ) ); ?>
+            <div class="clr"></div>
+        </section>
+    </section>
+    <section class="copyright paddingleft paddingright paddingbottom">
+        <p>Copyright <?php echo date('Y'); ?> Silas Willemsen</p>
+    </section> 
+
+    
 </footer>
 <?php wp_footer(); ?>
 
