@@ -50,6 +50,7 @@ body{
 
 
 .colfull{width:$full;height:$full;padding:6rem;position:relative;box-sizing:border-box;}
+
 .left{float:left;}
 .right{float:right;}
 .half{position:relative;width:$half;min-height:1px;}
@@ -110,22 +111,21 @@ table,label,input,textarea{
 
 /* Buttons
 -------------------------------*/
-.btn,.button,.wpcf7-submit{
+%btn{
     position:relative;
     cursor:pointer;
     display:inline-block;
     background-color:$color-btn;
-    color:$color-black;
-    
+    color:$color-black; 
     box-sizing:border-box;
     transition:all 0.15s ease-in 0s;
     border:none;
     font-size:1rem;
-    padding:1rem;
+    padding:1rem 2rem;
     padding-right:2rem; 
     
     svg{
-
+        height:1rem;
         position: absolute;
         right: 2rem;
         top: 50%;
@@ -150,7 +150,49 @@ table,label,input,textarea{
         }
     }
 }
+.btn,.button,.wpcf7-submit{
+    @extend %btn;
+}
 
+
+.btn-large{
+    @extend %btn;
+    
+    display:block;
+    width:50%;
+    float:left;
+    font-size:1.33333rem;
+    padding:1.5em 1.5em;
+    box-sizing:border-box;
+
+    &:nth-child(2){
+        background-color:$color-white;
+    }
+    &:hover{
+        background-color:$color-black;
+    }
+    svg{
+        height:1.33333rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+input.btn,input.button{
+    padding:1rem 2rem;
+}
 #posts{
     margin-top:2.5rem;
+
+    > article.colfull{padding:6rem 12rem;}
 }

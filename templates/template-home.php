@@ -27,12 +27,12 @@
     <section class="image half left">
             <figure></figure>
             <footer class="buttons">
-                <a href="#" class="btn">
+                <a href="#" class="btn-large">
                     <span>Ontwerp</span>
                     <svg width=15 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 24.32"><defs></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="chevron-right" points="0 2.84 2.84 0 15 12.16 2.84 24.32 0 21.49 9.32 12.16 0 2.84"/></g></g></svg>
                 </a>
                 
-                <a href="#" class="btn">
+                <a href="#" class="btn-large">
                     <span>Shop</span>
                     <svg width=15 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 24.32"><defs></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="chevron-right" points="0 2.84 2.84 0 15 12.16 2.84 24.32 0 21.49 9.32 12.16 0 2.84"/></g></g></svg>
                 </a>
@@ -71,7 +71,6 @@
             <span>Kies een deck</span>
         </li>
     </ul>
-    <div class="clr"></div>
 </section>
 <section id="customizerChoice" class="pagesection">
     <ul>

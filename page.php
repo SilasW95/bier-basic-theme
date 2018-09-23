@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 <main id="posts">
-    <div class="colfull auto">
+    <article class="colfull auto">
         <?php   
         foreach($posts as $post) {
             setup_postdata($post);
@@ -25,9 +25,8 @@ get_header(); ?>
             //echo '<h3>' . $category . '</h3>';
             the_content();
         } ?>
-        <div class="clr"></div>
-    </div><!-- colfull -->
-    </main><!-- posts -->
+    </article><!-- colfull -->
+</main><!-- posts -->
 
 
    <!-- <div id="posts" class="">
