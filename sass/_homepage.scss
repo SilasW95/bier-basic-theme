@@ -1,6 +1,68 @@
 #homeIntro{
-    padding-top:5rem;
-    width:100%;
+    padding-top:6rem;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    section{
+        //height:calc(100vh - 12rem);    
+        &:first-child{
+            padding:12rem 0;
+            box-sizing:border-box;
+            
+            display:flex;
+            
+            div{
+                margin-left:6.666666666666667rem;
+                h1{
+                    position:relative;
+                    margin-left:-2rem;
+                    font-family: "Edo",sans-serif;
+                    background-color:$color-btn;
+                    padding:1rem 2rem;
+                    //max-width:rem(420px);
+                    margin-bottom:0;
+                }
+                h4{
+                    color:$color-white;
+                    background-color:$color-black;
+                    padding:1rem 2rem;
+                    padding-top:1.5rem;
+                    //width:rem(420px);
+                    margin-top:-1em;
+                }
+            }
+        }
+        &:nth-child(2){
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(2,1fr 1fr 1fr 1fr);
+            figure{
+                grid-column:1/4;
+                grid-column-start: 2;
+                grid-column-end:5;
+                grid-row-start: 1;
+                grid-row-end:8;
+                background:green;
+            }
+
+            .ontwerp{
+                grid-column-start:1;
+                grid-column-end:3;
+                grid-row-start:8
+            }
+            .shop{
+                grid-row-start:8;
+                grid-column-start:3;
+                grid-column-end:5;
+            }
+        }
+          
+
+    }
+  
+
     
 
     .banner{
@@ -29,6 +91,8 @@
         }
     }
     .image{
+        display:grid;
+        grid-template
         figure{
             float:right;
             width:75%;
@@ -40,6 +104,10 @@
             width:100%;
             bottom:0;
 
+                .btn-large{
+                    width:50%;
+                    float:left;
+                }
             // .btn{
             //     display:block;
             //     width:50%;
@@ -66,13 +134,23 @@
 /* Explenation steps
 ---------------------------------------- */
 #steps{
+    // display:grid;
+    // grid-template-columns:25% 25% 25% 25%;
+    // grid-row-gap:1rem;
+    // grid-column-gap:1rem;
+
     ul{
+        width:100%;
+       display:inline-grid;
+
+       grid-template-columns:auto auto auto auto;
+       
+
         li{
-            width:25%;
-            float:left;
-            padding:2rem;
-            box-sizing:border-box;
-            display:block;
+            
+           
+          
+            padding:2rem 0;
             background-color:$color-black;
             color:$color-white;
             text-align:center;

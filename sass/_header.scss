@@ -1,6 +1,8 @@
  /* Header Navigate
     -------------------------------------------*/
 #header{ 
+    display:grid;
+    grid-template-columns: 8rem auto 8rem;
     position:fixed;
     top:0;
     left:0;
@@ -11,56 +13,63 @@
 
     %headerbtn{
         position:relative;
-        min-height:5rem;
-        min-width:6rem;
-        // width:$headerbtn;
+        min-height:6rem;
         cursor: pointer;
         color: #fff;
         
         background-color:$color-black;
-        // padding:2rem 2rem;
-        padding:2rem 2rem;
+        
         box-sizing: border-box;
         transition:padding 0.1s ease-in 0s;
     }
     .navOpener{
         @extend %headerbtn;
 
-        .line{
+        div{
             position:absolute;
-            height:0.2rem;
-            background-color:#fff;
-            transition:all 0.15s ease-in 0s;
+            left:50%;
+            top:43%;
+            transform: translateY(-50%) translateX(-50%);
 
-            &:nth-child(1){
-                width:2rem;
-            }
-            &:nth-child(2){
-                width:1.6rem;
-                margin-top:0.53rem;
-                opacity:1.0;
-                transition:all 0.1 ease-in 0s;
-            }
-            &:nth-child(3){
-                width:1.2rem;
-                margin-top:1.06rem;
-            }
-        }
-        &:hover{
+
             .line{
-                width:2rem;
+                position:absolute;
+                height:0.2rem;
+                background-color:#fff;
+                transition:all 0.15s ease-in 0s;
+    
+                &:nth-child(1){
+                    width:2rem;
+                }
+                &:nth-child(2){
+                    width:1.6rem;
+                    margin-top:0.53rem;
+                    opacity:1.0;
+                    transition:all 0.1 ease-in 0s;
+                }
+                &:nth-child(3){
+                    width:1.2rem;
+                    margin-top:1.06rem;
+                }
+            }
+            &:hover{
+                .line{
+                    width:2rem;
+                }
             }
         }
+        
     }
     .logo{
-        width: calc(100% - (#{$headerbtn + $headerbtn}));
         padding:1rem 0;
         text-align:center;
         box-sizing:border-box; 
         
-        svg{
-            width:5rem;
+        img{
+            width:7rem;
+
         }
+       
     }
     .shoppingcart{
         @extend %headerbtn; 
@@ -104,7 +113,7 @@
     #header{
         .navOpener{
             background-color:$color-black-secondary;
-            padding-top:2.5rem;
+            //padding-top:2.5rem;
 
             .line{
 
