@@ -21,6 +21,35 @@ body{
 }
 
 
+/* Grid Settings
+-------------------------------*/
+.grid-container-1{
+    display: grid;
+    grid-template-columns: auto ;
+}
+.grid-container-2{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.grid-container-3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    //padding:1rem;
+}
+.grid-container-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1;
+    //padding:1rem;
+    .no-padding{
+        padding:0;
+    }
+}
+.grid-split{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1; 
+}
 
 
 /* Main settings
@@ -49,26 +78,7 @@ body{
 
 .clr{clear:both;}
 
-/* Grid Settings
--------------------------------*/
-.grid-container-2{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.grid-container-3{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    //padding:1rem;
-}
-.grid-container-4{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    //padding:1rem;
-    .no-padding{
-        padding:0;
-    }
-    .padding{padding:1rem;}
-}
+
 
 
 
