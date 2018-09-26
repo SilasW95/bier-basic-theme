@@ -18,13 +18,25 @@
     </ul>
 </section>-->
 <section id="homeIntro" class="pagesection">
-    <section class="banner half left">
-        <section class="container">
+    <section style="">
+        <div>
+            <h1>Ontwerp je eigen deck</h1>
+            <h4>Lasergegraveerde skateboards</h4>
+        </div> 
+    </section>
+    <section>
+        <figure></figure>
+        <a href="#" class="btn-large ontwerp">Ontwerp</a>
+        <a href="#" class="btn-large shop">Shop</a>
+        
+    </section>
+    <!-- <section class="banner">
+        <section class="grid-container">
             <h1>Ontwerp je eigen deck</h1>
             <h4>Lasergegraveerde skateboards</h4>
         </section>
     </section>
-    <section class="image half left">
+    <section class="image">
             <figure></figure>
             <footer class="buttons">
                 <a href="#" class="btn-large">
@@ -37,8 +49,7 @@
                     <svg width=15 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 24.32"><defs></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="chevron-right" points="0 2.84 2.84 0 15 12.16 2.84 24.32 0 21.49 9.32 12.16 0 2.84"/></g></g></svg>
                 </a>
             </footer>
-    </section>   
-    <a class="arrow scroll" href="#work"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+    </section>    -->
 </section>
 <section id="steps" class="pagesection">
     <ul>

@@ -13,10 +13,12 @@
     
 <section class="cta pagesection colfull">
     <h2>Ontdek bestaande ontwerpen</h2>
-    <section class="big-btn">
-        <a class="btn" href="#">
+    <section>
+        <a class="btn-large" href="#">
+        
             <span>Bekijk de shop</span>
              <svg width=15 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 24.32"><defs></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="chevron-right" points="0 2.84 2.84 0 15 12.16 2.84 24.32 0 21.49 9.32 12.16 0 2.84"/></g></g></svg>
+            
         </a>
     </section>
 </section>
@@ -24,15 +26,15 @@
 <section class="usp">
     <ul>
         <li>
-            <svg width=75 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
             <section>Gratis verzending</section>
         </li>
         <li>
-            <svg width=75 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
             <section>Binnen 3 tot 5 weken</section>
         </li>
         <li>
-            <svg width=75 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
             <section>Veilig en makkelijk betalen</section>
         </li>
     </ul>
