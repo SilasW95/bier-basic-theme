@@ -9,9 +9,15 @@ function theme_register_scripts() {
 add_action( 'wp_enqueue_scripts', 'theme_register_scripts', 1 );
 
 
-/* Add menu support */
+
+
+add_theme_support( 'disable-custom-colors' );
+add_theme_support( 'disable-custom-font-size' );
+
+/* Add menu support - disable gutenberg font/size*/
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
+
 }
 
 /* Add post image support */
@@ -31,21 +37,21 @@ if ( function_exists( 'add_image_size' ) ) {
 /* Add widget support */
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-        'name'          => 'SidebarOne',
-        'id'            => 'SidebarOne',
+        'name'          => 'Primary',
+        'id'            => 'primary',
 	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h4 class="widgettitle">',
+        'before_title'  => '<h4 class="filtertitle">',
         'after_title'   => '</h4>',
     ));
     
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-        'name'          => 'SidebarTwo',
-        'id'            => 'SidebarTwo',
-	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'name'          => 'Woocommerce',
+        'id'            => 'sidebarwoo',
+	    'before_widget' => '<div id="%1$s" class="sidebar-filter %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h4 class="widgettitle">',
+        'before_title'  => '<h4 class="filter-title">',
         'after_title'   => '</h4>',
     ));
 

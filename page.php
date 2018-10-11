@@ -15,17 +15,18 @@
 get_header(); ?>
 
 
-<main id="posts">
-    <article class="colfull auto">
-        <?php   
+<main id="posts" class="colfull auto grid-container-12">
+	<article>
+	<?php   
+	
         foreach($posts as $post) {
             setup_postdata($post);
             $category = get_the_category();
             the_title('<h1 class="page-title">', '</h1>' ); 
             //echo '<h3>' . $category . '</h3>';
             the_content();
-        } ?>
-    </article><!-- colfull -->
+    } ?>
+	</article>
 </main><!-- posts -->
 
 

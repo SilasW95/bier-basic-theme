@@ -9,28 +9,27 @@
     z-index:990;
     width:$full;
     transition:left 0.15s ease-in 0s;
-    background:$color-white;
+    background:$white;
 
     %headerbtn{
         position:relative;
         min-height:6rem;
         cursor: pointer;
         color: #fff;
-        
-        background-color:$color-black;
-        
+        background-color:$black;
         box-sizing: border-box;
         transition:padding 0.1s ease-in 0s;
     }
     .navOpener{
         @extend %headerbtn;
 
-        div{
+        > section{
             position:absolute;
             left:50%;
             top:43%;
+            width:2rem;
             transform: translateY(-50%) translateX(-50%);
-
+            transition:all 0.1s ease-in 0s;
 
             .line{
                 position:absolute;
@@ -84,8 +83,8 @@
 #sideNav{
     z-index: 980;
     position:fixed;
-    top:5rem;
-    background-color:rgba(0,0,0,0.8);
+    top:6rem;
+    background-color:$black-secondary;
     left:-50%;
     width:50%;
     bottom:0;
@@ -93,8 +92,9 @@
     ul{
         li{
             a{
+                font-family: $font-stack;
                 display:block;
-                color:$color-white;
+                color:$white;
                 font-size:1rem;
                 padding:1rem 3rem;
                 box-sizing:border-box;   
@@ -112,24 +112,27 @@
 .open{
     #header{
         .navOpener{
-            background-color:$color-black-secondary;
-            //padding-top:2.5rem;
+            background-color:$black-secondary;
 
-            .line{
+            > section {
+                top:50%;
 
-                &:nth-child(1){
-                    transform:rotate(45deg);
-                    width:2rem;
+                .line{
+
+                    &:nth-child(1){
+                        transform:rotate(45deg);
+                        width:2rem;
+                    }
+                    &:nth-child(2){
+                        opacity:0;
+                    }
+                    &:nth-child(3){
+                        transform:rotate(-45deg);
+                        width:2rem;
+                        margin-top:0
+                    }
                 }
-                &:nth-child(2){
-                    opacity:0;
-                }
-                &:nth-child(3){
-                    transform:rotate(-45deg);
-                    width:2rem;
-                    margin-top:0
-                }
-            }
+            }    
         }
     }
     #sideNav{

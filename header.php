@@ -28,7 +28,7 @@
 
 <div id="container">
 <div id="wrapper" class="site main-container <?php echo ( !is_page_template( 'template-home.php' )) ? 'container': ''; ?>">
-    <section id="sideNav">
+    <nav id="sideNav">
     <?php wp_nav_menu( array(
                 'menu'           => 'Main', // Do not fall back to first non-empty menu.
                 'container' => false,
@@ -36,15 +36,14 @@
                 //'theme_location' => '__no_such_location'
                 'fallback_cb'    => false // Do not fall back to wp_page_menu()
             ) ); ?>
-    </section>
-    <div id="overlay"></div>
+    </nav>
 	<header id="header" class="site-header" role="banner">
             <section class="navOpener left">
-                <div class="hamburger">
+                <section class="hamburger">
                     <div class="line"></div>
                     <div class="line middle"></div>
                     <div class="line"></div> 
-                </div>  
+            </section>  
             </section>
             <figure class="logo left">
                 <a href="<?php bloginfo('url'); ?>">

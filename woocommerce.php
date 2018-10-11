@@ -15,14 +15,12 @@
 
 get_header(); ?>
 
-
-<main id="posts">
-    <div class="colfull auto">
-          
+<aside id="sidebar-primary" class="sidebar">
+    <?php dynamic_sidebar( 'sidebarwoo' ); ?>
+</aside>
+<main id="posts" class="colfull auto grid-container-12" >      
         <?php woocommerce_content(); ?>
-        <div class="clr"></div>
-    </div><!-- colfull -->
-    </main><!-- posts -->
+</main><!-- posts -->
 
 
 <?php 

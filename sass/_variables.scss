@@ -1,14 +1,10 @@
 $base-font-size:15px;
 $font-stack:'Poppins',sans-serif;
+$font-secondary:'Open Sans', sans-serif;
 $font-size-default:$base-font-size;
 
 
-$color-white:#fff;
-$color-black:#000;
-$color-black-secondary:#1D1D1D;
-$color-background:#F5F5F5;
-$color-btn:#EFCD3E;
-$color-highlight:#3d65b6;
+
 $full:100%;
 $half:50%;
 $quarter:25%;
@@ -21,6 +17,12 @@ $subtext:           #777;
 
 $headerbtn:8rem;
 
+$white:#fff;
+$black:#000;
+$black-secondary:#1D1D1D;
+$color-background:#F5F5F5;
+$color-btn:#EFCD3E;
+$color-highlight:#3d65b6;
 $green:         	#7ad03a;
 $red:           	#a00;
 $orange:        	#ffba00;

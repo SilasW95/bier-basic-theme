@@ -10,41 +10,37 @@
 ?>
 
 <footer id="footer">
+    <?php 
+    if(is_front_page()): ?>
+        <section class="cta block colfull grid-container-12">
+            <h2>Ontdek bestaande ontwerpen</h2>
+            <a class="btn-large" href="#">
+                <span>Bekijk de shop</span>        
+                <?php get_template_part('images/inline/chrevronright.svg'); ?>            
+            </a>
+        </section>
+        <ul class="usp grid-container-3">
+            <li>
+                <?php get_template_part('images/inline/usp.svg'); ?>            
+                <section>Gratis verzending</section>
+            </li>
+            <li>
+                <?php get_template_part('images/inline/usp.svg'); ?> 
+                <section>Binnen 3 tot 5 weken</section>
+            </li>
+            <li>
+                <?php get_template_part('images/inline/usp.svg'); ?> 
+                <section>Veilig en makkelijk betalen</section>
+            </li>
+        </ul>
+    <section class="video">
+        <section id="homeVideo"></section>
+    </section>
+    <?php      
+    endif;
+    ?>
     
-<section class="cta pagesection colfull">
-    <h2>Ontdek bestaande ontwerpen</h2>
-    <section>
-        <a class="btn-large" href="#">
-        
-            <span>Bekijk de shop</span>
-             <svg width=15 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 24.32"><defs></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="chevron-right" points="0 2.84 2.84 0 15 12.16 2.84 24.32 0 21.49 9.32 12.16 0 2.84"/></g></g></svg>
-            
-        </a>
-    </section>
-</section>
-
-<section class="usp">
-    <ul>
-        <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
-            <section>Gratis verzending</section>
-        </li>
-        <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
-            <section>Binnen 3 tot 5 weken</section>
-        </li>
-        <li>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M37.5,0A37.5,37.5,0,1,0,75,37.5,37.5,37.5,0,0,0,37.5,0Zm-.11,48.79h0L31.22,55h0l-6.17-6.16h0L14,37.69l6.17-6.17,11.1,11.1L54.65,19.19l6.17,6.16Z"/></g></g></svg>
-            <section>Veilig en makkelijk betalen</section>
-        </li>
-    </ul>
-</section>
-<section class="video">
-    <section id="homeVideo">
-        
-    </section>
-</section>
-<section class="paddingbottom colfull auto">
+<section class="paddingbottom block colfull auto">
     <h3>Dit maken anderen</h3>
 </section>
     <section id="socialslider" class="socialslider swiper-container">
@@ -68,32 +64,27 @@
             <a href="#" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider-1.jpg)"></a>
             </li>   
         </ul>
-        <div class="swiper-pagination"></div>
     </section>
-    <section class="colfull auto">
+    <section class="block colfull auto">
         <section class="newsletter">
             <h3>Blijf op de hoogte</h3>
             <form action="#">
                 <input type="text" name="newsletter-email" placeholder="e-mailadres"><input type="submit" class="btn" value="Zend">
             </form>
         </section>
-
-        <section class="footer-list paddingbottom">
-            <?php wp_nav_menu( array(
-                'menu'           => 'Footer', // Do not fall back to first non-empty menu.
-                'container' => false,
-                'menu_class' => 'footer-list-item',
-                //'theme_location' => '__no_such_location'
-                'fallback_cb'    => false // Do not fall back to wp_page_menu()
-            ) ); ?>
-            <div class="clr"></div>
-        </section>
+        <?php wp_nav_menu( array(
+            'menu'           => 'Footer', // Do not fall back to first non-empty menu.
+            'container' => false,
+            'menu_class' => 'footer-list grid-container-4 paddingbottom',
+            //'theme_location' => '__no_such_location'
+            'fallback_cb'    => false // Do not fall back to wp_page_menu()
+        ) ); ?>
+       
     </section>
-    <section class="copyright paddingleft paddingright paddingbottom">
-        <p>Copyright <?php echo date('Y'); ?> Silas Willemsen</p>
-    </section> 
 
-    
+    <section class="colfull no-Ypadding">
+        <p>Copyright <?php echo date('Y'); ?> Silas Willemsen</p>
+    </section>    
 </footer>
 <?php wp_footer(); ?>
 

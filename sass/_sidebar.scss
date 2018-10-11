@@ -1,0 +1,26 @@
+.sidebar{
+    position:absolute;
+    z-index:980;
+    left:0;
+    top:6rem;
+    width:300px;
+    height:100vh;
+    background-color:#fff;
+    padding:6rem 2rem;
+    box-sizing:border-box;
+
+    .sidebar-filter{
+        margin-bottom:2rem;
+
+        h4{
+            font-family: $font-stack;
+            font-size:14px;
+            font-weight:bold;
+        }
+        select{
+            width:100%;
+            padding:1rem;
+        }
+    }
+}
+

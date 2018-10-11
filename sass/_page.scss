@@ -1,0 +1,15 @@
+#posts{
+    margin-top:6rem;
+    padding:6rem;
+    box-sizing:border-box;
+
+    article{
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+}
+
+.page-title{
+    font-size:2rem;
+    margin-bottom:2rem;
+}

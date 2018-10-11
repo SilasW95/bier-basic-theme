@@ -45,12 +45,6 @@ All of these features are run when starting `gulp watch` except for image optimi
 
 [Modernizr](https://modernizr.com/) is included in already compiled `olympos.min.js` file. If you want to change build of the Modernizr just replace `lib/modernizer.min.js` with your own and run **uglify** task. 
 
-## Notes
-
-I've removed Compass from this version because I didn't see any real necessity for it. Also it slowed down css compilation process significantly. 
-
-I've added [Susy](http://susy.oddbird.net/) for making custom grids and to help with css layout. If you don't want to use it just remove `susy` folder from `sass` folder and remove `@import "susy";` and `@import "su";` from the `style.scss` file in `sass` folder;
-
 ### CSS and JavaScript
 
 All the of css can be found and should be written in partials. So that you end up with just one css file (style.css). 
@@ -59,10 +53,4 @@ JavaScript has two folders `lib` and `js` you should never touch `js` folder, th
 
 ### Some mixins and functions
 
-You have several mixins and functions in the `_mixins.scss` file along with comments on how to use them. These mixins and functions include:
-
-* Automatic calculation of percentages from pixels
-* Automatic calculations of rems from pixels 
-* Easy to use Media Queries in your normal css flow
-
-Open an issue for any problems that you encounter. 
+...
