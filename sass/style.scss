@@ -13,8 +13,7 @@ Tags: starter theme, light, sass, gulp, livereload
 */
 
 /* Vendor */
-//@import "susy";
-//@import "su";
+
 
 
 /* Setup */
@@ -33,6 +32,9 @@ Tags: starter theme, light, sass, gulp, livereload
 @import "footer";
 @import "slider";
 @import "woocommerce";
+
+/* Responsive */
+@import "media";
 
 
 

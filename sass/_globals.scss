@@ -4,7 +4,7 @@
     margin: 0;padding:0;
 }
 html{
-    font-size:$base-font-size;
+    font-size:$font-size-default;
     line-height: 1rem;
 }
 body{
@@ -73,12 +73,18 @@ body{
     grid-gap: 2rem;
     grid-template-columns: repeat(12,1fr);
 }
+
+.grid-container-14{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(14,1fr);
+}
 .grid-split{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1; 
 }
-
+#content{margin-top:6rem;}
 
 
 

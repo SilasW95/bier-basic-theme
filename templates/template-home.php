@@ -18,7 +18,6 @@
         </div> 
     </section>
     <section>
-        <figure></figure>
         <footer class="grid-split buttons">
             <a href="#" class="btn-large">
                 <span>Ontwerp</span>
@@ -30,6 +29,14 @@
             </a>
         </footer>
     </section>
+    <?php
+        $thumb_url = get_the_post_thumbnail_url();
+        
+        if(has_post_thumbnail()){
+            echo "<div class='homeBG' style='background-image:url($thumb_url)'></div>";
+        }
+
+        ?>
 </section>
 
 <ul id="steps" class="grid-container-4">
@@ -65,9 +72,10 @@
 <ul id="customizerChoice" class="grid-container-3">
     <li>
         <a href="#">
-            <figure>
+            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/longboard.jpg"></div>
+            <!-- <figure>
                 <?php get_template_part('images/inline/longboard.svg'); ?>
-            </figure>
+            </figure> -->
             <section class="btn" href="#">
                 <span>Longboard</span>
                 <?php get_template_part('images/inline/chrevronright.svg'); ?>
@@ -76,9 +84,10 @@
     </li>
     <li>
         <a href="#">
-            <figure>
+            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/skateboard.jpg"></div>
+            <!-- <figure>
                <?php get_template_part('images/inline/traditional.svg'); ?>
-            </figure>
+            </figure> -->
             <section class="btn">
                 <span>Traditioneel</span>
                 <?php get_template_part('images/inline/chrevronright.svg'); ?>
@@ -87,9 +96,10 @@
     </li>
     <li>
         <a href="#">
-           <figure>
-            <?php get_template_part('images/inline/cruiser.svg'); ?>
-            </figure>
+            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/cruiser.jpg"></div>
+           <!-- <figure>
+             <?php get_template_part('images/inline/cruiser.svg'); ?>
+            </figure> -->
             <section class="btn" href="#">
                 <span>Cruiser</span>
                 <?php get_template_part('images/inline/chrevronright.svg'); ?>

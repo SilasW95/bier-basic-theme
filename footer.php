@@ -97,7 +97,7 @@
     //width: 1920,               // Player width (in px)
     height: 405,              // Player height (in px)
     playerVars: {
-      autoplay: 0,        // Auto-play the video on load
+      autoplay: 1,        // Auto-play the video on load
       controls: 1,        // Show pause/play buttons in player
       showinfo: 0,        // Hide the video title
       modestbranding: 1,  // Hide the Youtube Logo

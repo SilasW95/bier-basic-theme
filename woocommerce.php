@@ -15,13 +15,16 @@
 
 get_header(); ?>
 
-<aside id="sidebar-primary" class="sidebar">
-    <?php dynamic_sidebar( 'sidebarwoo' ); ?>
-</aside>
-<main id="posts" class="colfull auto grid-container-12" >      
-        <?php woocommerce_content(); ?>
-</main><!-- posts -->
+<section id="content" class="grid-side-left">
+    <aside id="sidebar-primary" class="sidebar">
+        <?php dynamic_sidebar( 'sidebarwoo' ); ?>
+    </aside>
 
+    <main id="posts" class="colfull auto grid-container-9" >
+    <?php // woocommerce_breadcrumb() ?>      
+        <?php woocommerce_content(); ?>
+    </main><!-- posts -->
+</section>
 
 <?php 
 //get_sidebar();

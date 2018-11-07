@@ -1,9 +1,17 @@
+.grid-side-left{
+    // display: grid;
+	// grid-template-rows:;
+	// grid-template-columns: 300px 1fr;
+    // height: 100vh; 
+    display: grid;
+    grid-template-columns: 18rem 1fr;
+    
+    
+}
 .sidebar{
-    position:absolute;
-    z-index:980;
-    left:0;
-    top:6rem;
-    width:300px;
+    
+   
+    
     height:100vh;
     background-color:#fff;
     padding:6rem 2rem;

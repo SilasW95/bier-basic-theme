@@ -1,0 +1,47 @@
+@media handheld, screen and (min-width:1750px) {
+    html{font-size:18px;}
+}
+@media handheld, screen and (max-width:1350px) {
+    .columns-3{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media handheld, screen and (max-width:1200px) {
+    main{
+        #homeIntro.grid-split{
+            grid-template-columns:1fr;
+        }
+        #steps.grid-container-4{
+            grid-template-columns: repeat(2, 1fr);
+            
+            li{
+                &:nth-child(even){
+                    background-color:$black;
+                }
+                &:first-child(){
+                    background-color:$black-secondary;
+                }
+                &:nth-child(4n){
+                    background-color:$black-secondary;
+                }
+            }
+        } 
+    }
+}
+@media handheld, screen and (max-width:1000px) {
+    html{font-size:14px;}
+    .columns-3{
+        grid-template-columns: 1fr;
+    }
+    #customizerChoice{ 
+        li{
+            a{
+                figure{
+                    svg{height:15rem;}
+                }
+            }
+        }
+    } 
+}
+

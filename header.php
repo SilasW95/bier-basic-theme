@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php if(is_home()) bloginfo('name'); else wp_title(''); ?></title>
     <?php wp_head(); ?>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width initial-scale=1">
 </head>
 <body <?php body_class(); ?>>
 
@@ -50,8 +50,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg">
                 </a>
             </figure>
-            <section id="shoppingcart" class="shoppingcart right">
-                
-            </section>  
-        
+         <a id="shoppingcart" class="shoppingcart right" href="<?php echo get_permalink(10); ?>">
+            <?php get_template_part('images/inline/shopping-cart.svg'); ?>   
+        </a>  
 	</header><!-- #header -->

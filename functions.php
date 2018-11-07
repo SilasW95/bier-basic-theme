@@ -17,11 +17,11 @@ add_theme_support( 'disable-custom-font-size' );
 /* Add menu support - disable gutenberg font/size*/
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
-
+    add_theme_support( 'post-thumbnails' );
+        add_image_size('img_homeIntro',515,9999);
 }
 
-/* Add post image support */
-add_theme_support( 'post-thumbnails' );
+
 
 
 /* Add custom thumbnail sizes */
@@ -78,9 +78,41 @@ if ( class_exists( 'WooCommerce' ) ) {
     require get_template_directory() . '/inc/woo-setup.php';
 }
 
-/* if ( ! class_exists( 'Simple_Page_Ordering' ) ) {
-    require get_template_directory() . '/inc/simple-page-ordering/simple-page-ordering.php';
-} */
+
+//remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price',10 );
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title' ,10 );
+add_action( 'woocommerce_after_shop_loop_item', 'bier_product_loop_detail_wrapper', 6);
  
+function bier_product_loop_detail_wrapper() {
+    global $product;
+   // var_dump($product);
+
+    echo '<section class="product-detail-wrapper">';
+    echo '<h2 class="woocommerce-loop-product_title">'. get_the_title() .'</h2>';
+    if ( $price_html = $product->get_price_html() ) : ?>
+	    <span class="price"><?php echo $price_html; ?></span>
+    <?php endif; 
+    echo '</section>';
+
+
+   // $link = $product->get_permalink();
+   // echo '<a href="' . $link . '" class="button addtocartbutton">View Product</a>';
+
+   //var_dump($product);
+}
+
+
+
+
+
+
+//remove adminbar
+add_filter('show_admin_bar', '__return_false');
+
+ 
+
+
+
 
 

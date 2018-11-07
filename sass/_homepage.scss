@@ -1,9 +1,19 @@
 #homeIntro{
     padding-top:6rem;
 
+    div.homeBG{
+        position:absolute;
+        z-index:-1;
+        top:5rem;
+        right:0;
+        width:75%;
+        height:34rem;
+        background:$black-secondary;
+        background-position:left;
+        background-size:cover;
 
+    }
     section{
-   
         &:first-child{
             padding:12rem 0;
             box-sizing:border-box;
@@ -31,20 +41,14 @@
                 }
             }
         }
+
         &:nth-child(2){
             display:grid;
             grid-row: auto 30px;
             grid-template-columns: 1fr ;
             justify-content:end;
             align-content: end;
-            
-            figure{
-                width:75%;
-                justify-self: end;
-                height:30rem;
-               
-                background:green;
-            }
+            overflow:hidden;
         }
     }
  }
@@ -55,7 +59,7 @@
 #steps{
     li{ 
         justify-content: center;
-        padding:2rem 0;
+        padding:3rem 0;
         background-color:$black;
         color:$white;
         text-align:center;
@@ -81,50 +85,47 @@
 ---------------------------------------- */
 
 #customizerChoice{
-    li{
-        position:relative;
-        // height:rem(450px);
-        
-        background-image:url(images/customize-longboard.jpg);
-        background-size:100%;
-        background-position:center;
-        padding-bottom:rem(70px);
+    li{      
+        position:relative; 
         transition:all 0.2s ease-in 0s;
-
+        
         a{
-            figure{
-                text-align:center;
-                padding:2rem;
-                    svg{   
-                        height:20rem;
-                        filter:brightness(0.8);
-                    }
-                }  
-                .btn{
-                    position:absolute;
-                    bottom:0;
-                    width:100%;
-                    box-sizing:border-box;
-                }
+            div{
+                height:20rem;
+                background-image:url(images/customize-longboard.jpg);
+                background-size:cover;
+                background-position:center;            
             }
+            .btn{
+                bottom:0;
+                width:100%;
+                box-sizing:border-box;
+            }
+            // figure{
+            //     text-align:center;
+            //     padding:2rem;
+            //         svg{   
+            //             height:20rem;
+            //             filter:brightness(0.8);
+            //         }
+            //     }  
+            // }
             &:hover{
                 background-size:105%;
-
-                a{
-                    .btn{
-                        background-color:$black;
-                        color:#fff;
-                    
-                        .svg{
-                            filter: brightness(1); 
-                            right:1rem;
-                            text-decoration:none;
-                        }
-                    }
+                
+                .btn{
+                    background-color:$black;
+                    color:#fff;
+      
+                    svg{
+                        fill:#fff; 
+                        right:1rem;
+                        text-decoration:none;
+                    }             
                 }   
             }
         }
     }
-
+}
 
 
